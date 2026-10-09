@@ -62,8 +62,9 @@ Zero runtime dependencies. Ships ESM + CJS + `.d.ts`; the core is ~971 B and the
 [`trickle-json`](https://www.npmjs.com/package/trickle-json) (streaming partial-JSON parse),
 [`coerce-json`](https://www.npmjs.com/package/coerce-json) (schema repair/coercion),
 [`trickle-react`](https://www.npmjs.com/package/trickle-react) (React bindings),
-[`expect-llm`](https://www.npmjs.com/package/expect-llm) (LLM output assertions), and
-[`retry-wire`](https://www.npmjs.com/package/retry-wire) (provider-aware retry/throttle).
+[`expect-llm`](https://www.npmjs.com/package/expect-llm) (LLM output assertions),
+[`retry-wire`](https://www.npmjs.com/package/retry-wire) (provider-aware retry/throttle), and
+[`trickle-structured`](https://www.npmjs.com/package/trickle-structured) (the capstone: one call from `fetch` to a validated object).
 Each is zero-dependency and useful on its own.
 
 ## Quick start
