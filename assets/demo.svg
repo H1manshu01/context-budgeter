@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="430" viewBox="0 0 720 430" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" role="img" aria-label="context-budgeter trimming a chat history to fit the model context window">
+  <defs>
+    <style>
+      .fn   { fill: #39c5cf; }
+      .p    { fill: #8b949e; }
+      .c    { fill: #6e7681; }
+      .over { fill: #ffa657; }
+      .ok   { fill: #3fb950; }
+      .t    { font-size: 14px; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="720" height="430" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <rect x="0" y="0" width="720" height="40" rx="12" fill="#161b22"/>
+  <rect x="0" y="28" width="720" height="12" fill="#161b22"/>
+  <circle cx="22" cy="20" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="20" r="6" fill="#ffbd2e"/>
+  <circle cx="66" cy="20" r="6" fill="#27c93f"/>
+  <text x="360" y="25" text-anchor="middle" font-size="13" fill="#8b949e">chat history · budget 4,000 tokens</text>
+
+  <rect width="0" height="0">
+    <animate id="loop" attributeName="width" begin="0s;loop.end" dur="7.6s" values="0;0"/>
+  </rect>
+
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+0.2s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t c" x="28" y="82">// keep what matters, fit the window</text>
+    <text class="t fn" x="28" y="110">fit(history, { budget: 4000, count, strategy: "middle-out" })</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+1.3s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="28" y="152"><tspan class="p">tokens  </tspan><tspan class="over">7,120 / 4,000</tspan><tspan class="over">  over budget</tspan></text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+2.2s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="48" y="184"><tspan class="ok">✓ keep</tspan><tspan class="p"> system + last 4 turns</tspan></text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+3.1s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="48" y="216"><tspan class="c">✕ drop 6 middle turns (tool pairs kept intact)</tspan></text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+4.0s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="28" y="256"><tspan class="p">tokens  </tspan><tspan class="fn">3,980 / 4,000</tspan></text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" begin="loop.begin+4.8s" dur="0.2s" to="1" fill="freeze"/>
+    <animate attributeName="opacity" begin="loop.begin+7.2s" dur="0.2s" to="0" fill="freeze"/>
+    <text class="t" x="28" y="296"><tspan class="ok">✓ fits</tspan><tspan class="c">  ·  nothing pinned lost, order preserved</tspan></text>
+  </g>
+
+  <rect x="28" y="318" width="9" height="18" fill="#39c5cf">
+    <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.5;0.5;1" dur="1s" repeatCount="indefinite"/>
+  </rect>
+  <text class="t c" x="44" y="332">const { messages, dropped, fits } = fit(history, opts)</text>
+</svg>
