@@ -1,9 +1,10 @@
 ---
 title: "Fit any chat history into the context window, bring your own tokenizer"
-published: false
+published: true
 description: "Every LLM app eventually overflows the context window, and the fix is always the same trimming shape — keep the system prompt, keep the recent turns, drop or fold the rest. context-budgeter is that shape done once: a tiny, zero-dependency, tokenizer-agnostic trimmer with pluggable strategies and a guarantee it never exceeds the budget or drops a pinned message."
 tags: typescript, ai, opensource, webdev
 cover_image: https://raw.githubusercontent.com/H1manshu01/context-budgeter/main/assets/cover.png
+canonical_url: https://dev.to/h1manshu01/fit-any-chat-history-into-the-context-window-bring-your-own-tokenizer-5184
 ---
 
 You ship a chat feature. It works. Then a conversation gets long enough, a couple
